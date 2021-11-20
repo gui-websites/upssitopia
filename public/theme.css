@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Press+Start+2P&display=swap');
+
+:root {
+  /* Colors */
+
+  --black: #141414;
+  --white: #fff;
+
+  --primary: #ffbd59;
+
+  --secondary-header: rgba(0, 0, 0, 0.3);
+
+  /* Sizes */
+
+  --gap-0: 8px;
+  --gap-1: 16px;
+  --gap-2: 24px;
+  --gap-3: 32px;
+  --gap-4: 48px;
+
+  /* Text */
+
+  font-family: "Jura", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

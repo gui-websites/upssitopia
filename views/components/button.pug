@@ -1,0 +1,26 @@
+mixin button()
+  button.app-button(class!=attributes.class)
+    block
+
+style.
+  .app-button {
+      font-family: "Jura", sans-serif;
+      text-transform: uppercase;
+      font-size: 14pt;
+
+      padding: var(--gap-2);
+      background-color: var(--white);
+      
+      border: none;
+      border-radius: 8px;
+
+      display: flex;
+      align-items: center;
+      gap: var(--gap-1);
+      
+      cursor: pointer;
+  }
+
+  .app-button.orange {
+      background-color: var(--primary);
+  }
