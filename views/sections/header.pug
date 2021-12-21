@@ -12,8 +12,8 @@ header
     h1 UPSSITOPIA
     h3 Embarquez à bord de l'UPSSITOPIA vers une année de rêve
     #header-cta
-      +button Notre programme
-      +button(class="orange")
+      +button("") Notre programme
+      +button("https://www.youtube.com/watch?v=dQw4w9WgXcQ?t=0")(class="orange")
         i(data-feather="instagram")
         | Suivez-nous
 
@@ -44,6 +44,7 @@ style.
   header::after {
     background: url('img/space.png') center center;
     background-size: cover;
+    background-attachment: fixed;
     
     opacity: 0.3;
     z-index: -1;

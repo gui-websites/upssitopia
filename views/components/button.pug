@@ -1,5 +1,5 @@
-mixin button()
-  button.app-button(class!=attributes.class)
+mixin button(href)
+  a.app-button(class!=attributes.class href=href target="_blank")
     block
 
 style.
@@ -19,6 +19,9 @@ style.
       gap: var(--gap-1);
       
       cursor: pointer;
+
+      text-decoration: none;
+      color: var(--black);
   }
 
   .app-button.orange {
