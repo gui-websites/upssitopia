@@ -1,0 +1,34 @@
+poles:
+  - nom: bureau
+    couleur: "#AA0000"
+    membres:
+
+    - nom: "Loan Bernat"
+      role: "Président"
+      img: "loan.png"
+      responsable: true
+
+    - nom: "Eliott Gaudillet"
+      role: "Vice-Président"
+      img: "eliott.png"
+
+    - nom: "Pierre Pinçon"
+      role: "Vice-Trésorier"
+      img: "pierre.png"
+
+  - nom: "Pole communication"
+    couleur: "#00AA00"
+    membres:
+
+    - nom: "Manon Couffin"
+      role: "Responsable"
+      img: "manon.png"
+      responsable: true
+
+    - nom: "Dorian Saurat"
+      role: "Content Manager"
+      img: "dorian.png"
+
+
+
+

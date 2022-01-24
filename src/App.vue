@@ -5,15 +5,11 @@
 </template>
 
 <style>
+@import "./assets/theme.css";
 
 html, body, #app {
   margin: 0;
   height: 100%;
-}
-
-@font-face {
-  font-family: 'Spartan';
-  src: url('./assets/fonts/league-spartan.otf');
 }
 
 #app {

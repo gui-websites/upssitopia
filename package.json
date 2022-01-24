@@ -9,8 +9,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "js-yaml-loader": "^1.2.2",
+    "json-loader": "^0.5.7",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-showdown": "^2.4.1",
+    "yaml-js": "^0.3.1",
+    "yaml-loader": "^0.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -20,6 +25,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "raw-loader": "^4.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

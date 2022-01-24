@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+
+  --black: #141414;
+  --white: #fff;
+
+  --primary: #ffbd59;
+
+  --secondary-header: rgba(0, 0, 0, 0.3);
+
+  /* Sizes */
+
+  --s0: 8px;
+  --s1: 16px;
+  --s2: 24px;
+  --s3: 32px;
+  --s4: 48px;
+}
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('./fonts/league-spartan.otf');
+}
