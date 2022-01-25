@@ -13,7 +13,7 @@ html, body, #app {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Jura", sans-serif;
   text-align: center;
 }
 </style>

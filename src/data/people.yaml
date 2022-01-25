@@ -1,6 +1,6 @@
 poles:
-  - nom: bureau
-    couleur: "#AA0000"
+  - nom: Bureau
+    couleur: "#cc5803"
     membres:
 
     - nom: "Loan Bernat"
@@ -17,7 +17,7 @@ poles:
       img: "pierre.png"
 
   - nom: "Pole communication"
-    couleur: "#00AA00"
+    couleur: "#E2711D"
     membres:
 
     - nom: "Manon Couffin"

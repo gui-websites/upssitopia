@@ -1,10 +1,13 @@
 <template>
-  <div id="members">
-      <h1>Notre équipe</h1>
+  <div id="members" class="section">
+      <h2>Notre équipe</h2>
 
-     <MemberList v-for="list in members.poles" :key="list.nom" :lname="list.nom" :color="list.couleur">
-        <Member v-for="member in list.membres" :key="member.name" :info="member" :color="list.couleur" :revealed="revealed(member.nom)" />
-     </MemberList>
+      <div class="content">
+        <MemberList v-for="list in members.poles" :key="list.nom" :lname="list.nom" color="var(--primary)">
+            <Member v-for="member in list.membres" :key="member.name" :info="member" color="var(--primary)" :revealed="revealed(member.nom)" />
+        </MemberList>
+      </div>
+     
   </div>
 </template>
 
@@ -39,6 +42,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+    #members {
+        min-height: 100%;
+        padding: var(--s4);
+    }
+
+    #members h2 {
+        color: var(--white);
+    }
+
+    
 
 </style>

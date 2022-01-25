@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('./fonts/league-spartan.otf');
+}
+
 :root {
     /* Colors */
 
@@ -5,8 +13,7 @@
   --white: #fff;
 
   --primary: #ffbd59;
-
-  --secondary-header: rgba(0, 0, 0, 0.3);
+  --secondary: rgba(0, 0, 0, 0.3);
 
   /* Sizes */
 
@@ -17,7 +24,26 @@
   --s4: 48px;
 }
 
-@font-face {
-  font-family: 'Spartan';
-  src: url('./fonts/league-spartan.otf');
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section h2, .font-secondary {
+  font-family: 'Audiowide', 'Press Start 2P', monospace;
+}
+
+.section {
+  padding: var(--s4);
+  min-height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.section .content {
+  width: 95%;
+  max-width: 1200px;
+  margin: var(--s4) auto var(--s2);
 }
