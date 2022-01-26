@@ -22,7 +22,7 @@ export default {
 
 <style>
   html {
-    background: url('../assets/img/space.png') center center no-repeat fixed;
+    background: url('../assets/img/space.png') center center repeat-y fixed;
     background-size: cover;
   }
 

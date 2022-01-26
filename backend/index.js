@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 const sheetId = "1UVDsv9Fc9aQq2Ffz1nFiK9P0AvhIfRUniq-4jSTUINg";
-const range = "Sheet1!A:B";
+const range = "Sheet1!A:E";
 
 
 
@@ -33,7 +33,7 @@ async function main() {
         res.send("Hello")
     })
 
-    app.get("/reveals", async (req, res) => {
+    app.get("/members", async (req, res) => {
     
         // Read rows from spreadsheet
         const getRows = await googleSheets.spreadsheets.values.get({
@@ -42,13 +42,21 @@ async function main() {
             range: range
         })
 
-        let returnData = []
+        let returnData = {}
     
         if(getRows.data.values) {
-            returnData = getRows.data.values.slice(1).map(row => ({
-                name: row[0],
-                revealed: (row[1] != undefined)
-            }));
+
+            for(const row of getRows.data.values.slice(1)) {
+                const [ name, revealed, role, pole, resp ] = row;
+
+                if(returnData[pole] == undefined) returnData[pole] = [];
+                returnData[pole].push({
+                    name: name,
+                    role: role,
+                    resp: resp != undefined && resp != "",
+                    revealed: revealed != undefined && revealed != ""
+                })
+            }
         }
 
         res.json(returnData);

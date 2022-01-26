@@ -1,5 +1,5 @@
 <template>
-  <div class="member" :style="colorSet" :class="{ resp: isResp }">
+  <div class="member" :class="{ resp: info.resp }">
       <div class="image"><img :src="pfp" :alt="pfp"></div>
       <h3 class="name">{{ pName }}</h3>
       <span class="role">{{ info.role }}</span>
@@ -8,24 +8,27 @@
 
 <script>
 export default {
-    props: [ "info", "color", "revealed" ],
+    props: [ "info" ],
 
     computed: {
         pName() {
-            return this.revealed ? this.info.nom : "???"
+            console.log(this.info)
+            return this.info.revealed ? this.info.name : "???"
         },
 
         pfp() {
-            return this.revealed ? require(`../data/people/${this.info.img}`) : require("../assets/img/logo.png")
-        },
+            let pfp = require("../assets/img/logo.png");
+            
+            if(this.info.revealed) {
+                try {
+                    pfp = require(`../data/people/${this.info.name}.png`);
+                } catch(err) {
+                    console.log("hello")
+                }
+            }
 
-        isResp() {
-            return (this.info.responsable != undefined)
+            return pfp;
         },
-
-        colorSet() {
-            return `--color: ${this.color}`
-        }
     }
 }
 </script>
@@ -42,7 +45,7 @@ export default {
     }
 
     .member.resp {
-        border: calc(var(--s0) / 2) solid var(--color);
+        border: calc(var(--s0) / 2) solid var(--primary);
     }
 
     .member img {
@@ -53,11 +56,12 @@ export default {
     .member .image {
         position: relative;
         height: var(--img-size);
+        background: var(--primary);
     }
 
     .member .image::after {
         content: "";
-        box-shadow: inset -2px 0 var(--s2) var(--secondary);
+        box-shadow: inset 0 0 var(--s3) rgba(0, 0, 0, 0.5);
         
         width: 100%;
         height: 100%;

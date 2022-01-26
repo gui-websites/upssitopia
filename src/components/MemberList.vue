@@ -1,5 +1,5 @@
 <template>
-  <div class="member-list" :style="bgRule">
+  <div class="member-list">
       <h3>{{ lname }}</h3>
       <div class="members">
           <slot />
@@ -9,13 +9,7 @@
 
 <script>
 export default {
-    props: [ "lname", "color" ],
-
-    computed: {
-        bgRule() {
-            return `--color: ${this.color}`
-        }
-    }
+    props: [ "lname" ],
 }
 </script>
 
@@ -27,7 +21,7 @@ export default {
 
     .member-list h3 {
         width: 100%;
-        color: var(--color);
+        color: var(--primary);
         
 
         text-align: left;
@@ -35,13 +29,14 @@ export default {
 
         margin-bottom: var(--s4);
         padding-bottom: var(--s1);
-        border-bottom: 2px solid var(--color);
+        border-bottom: 2px solid var(--primary);
     }
 
     .members {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
         gap: var(--s2);
     }
 
