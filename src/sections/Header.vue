@@ -3,35 +3,33 @@
       <nav class="flex-between">
           <div class="left">
               <img src="@/assets/img/logo.png" alt="" id="logo">
-              
           </div>
           
-          <div class="right flex-between">
-              <a href="">Notre Programme</a>
-              <a href="">L'équipe</a>
-              <a href="">Évenements</a>
-          </div>
+          <a :href="insta_link" target="_blank" id="cta-social">
+                <img src="../assets/img/instagram.svg" />
+                <span>Suivez-nous</span>
+            </a>
       </nav>
 
       <div class="center">
           <div>
-            <h1>UPSSITOPIA</h1>
+            <h1 ref="h1">UPSSITOPIA</h1>
             <h2 class="font-secondary">Embarquez à bord de l'UPSSITOPIA vers une année de rêve</h2>
-            <MyButton href="https://instagram.com/liste_upssitopia?utm_medium=copy_link" newpage id="cta-social">
-                <img src="../assets/img/instagram.svg" />
-                Suivez-nous
-            </MyButton>
           </div>
       </div>
   </header>
 </template>
 
 <script>
-import MyButton from '../components/MyButton.vue'
 
 export default {
-  components: { MyButton },
   name: "Header",
+
+  data() {
+      return {
+          insta_link: process.env.VUE_APP_INSTA_LINK
+      }
+  },
 }
 </script>
 
@@ -88,13 +86,31 @@ export default {
         margin: 0 0 var(--s2);
     }
 
-    header .center #cta-social {
+    header #cta-social {
+        
         display: inline-flex;
-        gap: var(--s1);
         align-items: center;
         justify-content: center;
+        gap: var(--s0);
+    }
 
-        margin-top: var(--s4);
+    /* Mobile view */
+    @media only screen and (max-width: 480px) {
+        nav .right {
+            display: none;
+        }
+
+        header .center h1 {
+            font-size: 15vw;
+        }
+
+        header .center h2 {
+            font-size: 5vw;
+        }
+
+        header nav a {
+            font-size: 1.2em;
+        }
     }
 
 </style>

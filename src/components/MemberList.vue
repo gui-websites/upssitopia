@@ -40,4 +40,15 @@ export default {
         gap: var(--s2);
     }
 
+    @media only screen and (max-width: 480px) {
+        .member-list:first-child {
+            margin-top: 0;
+        }
+
+        .members {
+            width: calc(280px + var(--s2));
+            margin: auto;
+        }
+    }
+
 </style>

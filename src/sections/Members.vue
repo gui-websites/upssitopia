@@ -37,11 +37,11 @@ export default {
 
     #members {
         min-height: 100%;
-        padding: var(--s4);
     }
 
     #members h2 {
         color: var(--white);
+        margin-bottom: 0;
     }
 
     

@@ -56,8 +56,29 @@ export default {
   }
 
   #about #cta-about {
+    display: none;
     font-size: 1em;
     margin-top: var(--s2);
+  }
+
+  @media only screen and (max-width: 480px) {
+    #about h2 {
+      margin-bottom: var(--s4);
+    }
+
+    #about .content .sbs {
+      display: grid;
+      grid-template-areas: 'i' '.';
+      gap: var(--s2);
+    }
+
+    #about .content .sbs img {
+      grid-area: i;
+    }
+
+    #about .content .sbs > * {
+      width: 100%;
+    }
   }
 
 </style>
