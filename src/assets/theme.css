@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Audiowide&display=swap');
+
+:root {
+    /* Colors */
+
+  --black: #141414;
+  --white: #fff;
+
+  --primary: #ffbd59;
+  --secondary: rgba(0, 0, 0, 0.3);
+
+  /* Sizes */
+
+  --s0: 8px;
+  --s1: 16px;
+  --s2: 24px;
+  --s3: 32px;
+  --s4: 48px;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section h2, .font-secondary {
+  font-family: 'Audiowide', monospace;
+}
+
+.section {
+  padding: var(--s4);
+  min-height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.section .content {
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--s4) auto var(--s2);
+}
+
+@media only screen and (max-width: 480px) {
+  .section {
+    padding: var(--s2);
+  }
+}
