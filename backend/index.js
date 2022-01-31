@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const { google } = require("googleapis");
+const fs = require("fs");
+const https = require("https");
 
 require("dotenv").config();
 
@@ -62,8 +64,16 @@ async function main() {
         res.json(returnData);
     });
     
-    app.listen(3000, () => console.log("Backend ready"))
+    const port = process.env.PORT || 4000
 
+    if(process.env.PROD) {
+        const certificate = fs.readFileSync(process.env.SSL_CRT, 'utf-8')
+        const privateKey = fs.readFileSync(process.env.SSL_KEY, 'utf-8')
+        const credentials = {key: privateKey, cert: certificate}
+
+        https.createServer(credentials, app).listen(port, console.log('Running HTTPS on port ' + port))
+    } else
+    app.listen(port, console.log('Running HTTP on port ' + port))
 
 }
 

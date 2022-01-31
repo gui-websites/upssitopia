@@ -14,7 +14,6 @@ export default {
 
     computed: {
         pName() {
-            console.log(this.info)
             return this.info.revealed ? this.info.name : "???"
         },
 
@@ -25,7 +24,7 @@ export default {
                 try {
                     pfp = require(`../data/people/${this.info.name}.png`);
                 } catch(err) {
-                    console.log("hello")
+                    console.log("ping");
                 }
             }
 
