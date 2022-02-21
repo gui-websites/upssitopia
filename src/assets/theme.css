@@ -42,6 +42,10 @@
   margin: var(--s4) auto var(--s2);
 }
 
+ul {
+  padding-left: var(--s1);
+}
+
 @media only screen and (max-width: 480px) {
   .section {
     padding: var(--s2);

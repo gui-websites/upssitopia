@@ -37,11 +37,12 @@ export default {
 
     #members {
         min-height: 100%;
+        /* background-color: var(--white); */
     }
 
     #members h2 {
-        color: var(--white);
         margin-bottom: 0;
+        color: var(--white);
     }
 
     
